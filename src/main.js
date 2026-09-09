@@ -23,6 +23,9 @@ import royjoafot5 from './assets/img/royjoafot5.jpeg'
 import royjoafot6 from './assets/img/royjoafot6.jpeg'
 import royjoafot7 from './assets/img/royjoafot7.jpeg'
 import royjoafot8 from './assets/img/royjoafot8.jpeg'
+import mateJuntos from './assets/img/matejuntos.jpeg'
+import capretta from './assets/img/capretta.jpeg'
+import churros from './assets/img/churrosjuntos.jpeg'
 
 const app = document.querySelector('#app')
 
@@ -73,6 +76,12 @@ const CONFIG = {
       { titulo: 'Ir a comer a borde pizza', fotos: [] },
       { titulo: 'DelBajon y pelis', fotos: [delBajon] },
       { titulo: 'Bingo juntos', fotos: [bingoJuntos] },
+      {titulo: 'Mates juntos', fotos: [mateJuntos] },
+      {titulo: 'Churros', fotos: [churros] },
+      {titulo: 'Capretta', fotos: [capretta] },
+
+
+
 
     ],
   },
@@ -255,15 +264,28 @@ const screenSi = `
     <div class="si-card glass-card w-full max-w-md px-6 py-8 text-center sm:px-10">
       ${cornersHtml}
       <div class="si-heart chip-heart chip-heart--lg" aria-hidden="true">❤️</div>
-      <h2 class="glow-rose mt-5 font-display text-2xl font-light tracking-tight text-rose sm:text-3xl">No sabés lo feliz que me hace dar un paso más en nuestro vínculo. ❤️</h2>
+      <h2 class="glow-rose mt-5 font-display text-2xl font-light tracking-tight text-rose sm:text-3xl">
+        No sabés lo feliz que me hace que hayas elegido estar conmigo
+        ❤️ 
+        <br></br> 
+        Yo te elegiría una y mil veces a vos❤️
+      </h2>
       <div class="mt-7 flex justify-center">
         <div class="si-foto-wrapper relative flex h-40 w-40 items-center justify-center overflow-hidden rounded-full border-2 border-mint/50 bg-ink/40 shadow-[0_0_40px_rgba(45,184,112,0.25)] sm:h-44 sm:w-44">
-          <div class="absolute inset-0 flex items-center justify-center text-4xl" aria-hidden="true">❤️</div>
+          <img
+            src="${royjoafot7}"
+            alt="Nosotros"
+            class="h-full w-full object-cover"
+          />
         </div>
       </div>
-      <p class="mt-7 text-base leading-relaxed text-blush/70 sm:text-lg">
-        Y me llena el corazón saber que es con vos. ❤️
+      <p class="mt-7 text-base font-semibold leading-relaxed text-blush sm:text-lg">
+        <strong> lo feliz que me hace</strong>
       </p>
+      <p class="text-base font-semibold leading-relaxed text-blush sm:text-lg">
+        <strong>que seas vos ❤️ </strong>
+      </p>
+      <div class="mt-4 text-2xl" aria-hidden="true">❤️</div>
       <div class="cierre-si mt-7 rounded-2xl border border-mint/25 bg-ink/40 px-6 py-5 backdrop-blur-sm">
         <p class="cierre-teamo font-display text-3xl font-light italic tracking-wide text-rose sm:text-4xl">Te amo.</p>
         <p class="cierre-joa mt-2 font-display text-2xl font-semibold text-jade sm:text-3xl">
