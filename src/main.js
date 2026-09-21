@@ -26,6 +26,43 @@ import royjoafot8 from './assets/img/royjoafot8.jpeg'
 import mateJuntos from './assets/img/matejuntos.jpeg'
 import capretta from './assets/img/capretta.jpeg'
 import churros from './assets/img/churrosjuntos.jpeg'
+import cafecitoYTostados from './assets/img/cafeConLecheYTostados.jpeg'
+import MegaHamburguesas from './assets/img/MegaHamburgesasByJoa.jpeg'
+import TorreDeCartas from './assets/img/TorreDeCartas.jpeg'
+import citaLoDePepe2 from './assets/img/citaLoDePepe2.jpeg'
+import fideosConManteca from './assets/img/fideosConManteca.jpeg'
+import pochoclosJuntos from './assets/img/pochoclosJuntosss.jpeg'
+import residentEvil from './assets/img/residentEvilZonaCero.jpeg'
+import citaPool2 from './assets/img/citaPool2.jpeg'
+import royjoafot9 from './assets/img/royjoafot9.jpeg'
+import royjoafot10 from './assets/img/royjoafot10.jpeg'
+import royjoafot11 from './assets/img/royjoafot11.jpeg'
+import royjoafot12 from './assets/img/royjoafot12.jpeg'
+import royjoafot13 from './assets/img/royjoafot13.jpeg'
+import royjoafot14 from './assets/img/royjoafot14.jpeg'
+import royjoafot15 from './assets/img/royjoafot15.jpeg'
+import royjoafot16 from './assets/img/royjoafot16.jpeg'
+import royjoafot17 from './assets/img/royjoafot17.jpeg'
+import royjoafot18 from './assets/img/royjoafot18.jpeg'
+import royjoafot19 from './assets/img/royjoafot19.jpeg'
+import royjoafot20 from './assets/img/royjoafot20.jpeg'
+import royjoafot21 from './assets/img/royjoafot21.jpeg'
+import royjoafot22 from './assets/img/royjoafot22.jpeg'
+import royjoafot23 from './assets/img/royjoafot23.jpeg'
+import royjoafot24 from './assets/img/royjoafot24.jpeg'
+import royjoafot25 from './assets/img/royjoafot25.jpeg'
+import royjoafot26 from './assets/img/royjoafot26.jpeg'
+import royjoafot27 from './assets/img/royjoafot27.jpeg'
+import royjoafot28 from './assets/img/royjoafot28.jpeg'
+import royjoafot29 from './assets/img/royjoafot29.jpeg'
+import royjoafot30 from './assets/img/royjoafot30.jpeg'
+import royjoafot31 from './assets/img/royjoafot31.jpeg'
+import royjoafot32 from './assets/img/royjoafot32.jpeg'
+import royjoafot33 from './assets/img/royjoafot33.jpeg'
+import royjoafot34 from './assets/img/royjoafot34.jpeg'
+import jugarALasCartas from './assets/img/JugarALasCartas.jpeg'
+import desayunoYpf from './assets/img/desayunoYPF.jpeg'
+import delBajon2 from './assets/img/DelBajon.jpeg'
 
 const app = document.querySelector('#app')
 
@@ -43,17 +80,16 @@ const CONFIG = {
       { titulo: 'Ir a comer en Dean & Dennys', fotos: [citaDeanDennys, citaDeanDennys2] },
       { titulo: 'Ir a ver el reestreno de Harry Potter', fotos: [harryPotter, harrypotter2] },
       { titulo: 'Ir a ver The Fockers in Law', fotos: [] },
-      { titulo: 'Ir a ver Resident Evil', fotos: [] },
       { titulo: 'Ir a ver Clayface', fotos: [] },
       { titulo: 'Ir a ver Los Juegos del Hambre', fotos: [] },
       { titulo: 'Ir al Rosedal', fotos: [] },
       { titulo: 'Cocinar juntos', fotos: [] },
-      { titulo: 'Ir al pool', fotos: [citaPool] },
-      { titulo: 'Ir a comer panchos en lo de Pepe', fotos: [citaLoDePepe] },
+      { titulo: 'Ir al pool', fotos: [citaPool, citaPool2] },
+      { titulo: 'Ir a comer panchos en lo de Pepe', fotos: [citaLoDePepe, citaLoDePepe2] },
       { titulo: 'Ir a ver cars reestreno 8 octubre', fotos: [] },
       { titulo: 'Salir juntos a bailar', fotos: [] },
       { titulo: 'Jugar al tejo', fotos: [tejo] },
-      { titulo: 'Jugar a las cartas', fotos: [] },
+      { titulo: 'Jugar a las cartas', fotos: [jugarALasCartas] },
       { titulo: 'Berenice x2 probar chipa y croassan del chocolate verde', fotos: [] },
       { titulo: 'Piedra papel o tijera date', fotos: [] },
       { titulo: 'Ir a la freseria', fotos: [] },
@@ -74,11 +110,20 @@ const CONFIG = {
       { titulo: 'Planetario', fotos: [] },
       { titulo: 'Hacer sándwich de churrasco y huevo', fotos: [] },
       { titulo: 'Ir a comer a borde pizza', fotos: [] },
-      { titulo: 'DelBajon y pelis', fotos: [delBajon] },
+      { titulo: 'DelBajon y pelis', fotos: [delBajon, delBajon2] },
       { titulo: 'Bingo juntos', fotos: [bingoJuntos] },
       {titulo: 'Mates juntos', fotos: [mateJuntos] },
       {titulo: 'Churros', fotos: [churros] },
       {titulo: 'Capretta', fotos: [capretta] },
+      {titulo: 'Café con leche y tostados', fotos: [cafecitoYTostados] },
+      {titulo: 'Mega hamburguesas', fotos: [MegaHamburguesas] },
+      {titulo: 'Torre de cartas', fotos: [TorreDeCartas] },
+      {titulo: 'Cocinar fideos con manteca', fotos: [fideosConManteca] },
+      {titulo: 'Hacer pochoclos juntos', fotos: [pochoclosJuntos] },
+      {titulo: 'Ir a ver Resident Evil', fotos: [residentEvil] },
+
+      
+
 
 
 
@@ -86,14 +131,40 @@ const CONFIG = {
     ],
   },
   fotosJuntos: [
-    royjoafot7,
     royjoafot1,
     royjoafot2,
     royjoafot3,
     royjoafot4,
     royjoafot5,
     royjoafot6,
+    royjoafot7,
     royjoafot8,
+    royjoafot9,
+    royjoafot10,
+    royjoafot11,
+    royjoafot12,
+    royjoafot13,
+    royjoafot14,
+    royjoafot15,
+    royjoafot16,
+    royjoafot17,
+    royjoafot18,
+    royjoafot19,
+    royjoafot20,
+    royjoafot21,
+    royjoafot22,
+    royjoafot23,
+    royjoafot24,
+    royjoafot25,
+    royjoafot26,
+    royjoafot27,
+    royjoafot28,
+    royjoafot29,
+    royjoafot30,
+    royjoafot31,
+    royjoafot32,
+    royjoafot33,
+    royjoafot34,
   ],
 }
 
