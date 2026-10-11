@@ -67,6 +67,22 @@ import royjoafot31 from './assets/img/royjoafot31.jpeg'
 import royjoafot32 from './assets/img/royjoafot32.jpeg'
 import royjoafot33 from './assets/img/royjoafot33.jpeg'
 import royjoafot34 from './assets/img/royjoafot34.jpeg'
+import royjoafot35 from './assets/img/royjoafot35.jpeg'
+
+import berenice2 from './assets/img/berenice2.jpeg'
+import berenice21 from './assets/img/berenice2.1.jpeg'
+import berenice22 from './assets/img/berenice2.2.jpeg'
+import citaPepe3 from './assets/img/citaPepe3.jpeg'
+import heladoJuntos from './assets/img/HeladoJuntos.jpeg'
+import jugarPlantaVsZombies from './assets/img/JugarPlantaVsZombies.jpeg'
+import lujan2026 from './assets/img/Lujan2026.jpeg'
+import lujan2026Dos from './assets/img/Lujan2026Dos.jpeg'
+import lujan2026Tres from './assets/img/Lujan2026Tres.jpeg'
+import lujan2026Cuatro from './assets/img/Lujan2026Cuatro.jpeg'
+import megaBurgersYFritas from './assets/img/MegaBurgersYFritas.jpeg'
+import panquequesJuntos from './assets/img/panquequesJuntos.jpeg'
+import panquequesJuntos2 from './assets/img/panquequesJuntos2.jpeg'
+import pizzaDeLosSuegris from './assets/img/PizzaDeLosSuegris.jpeg'
 
 const fotosJuntos = [
   royjoafot1, royjoafot2, royjoafot3, royjoafot4, royjoafot5, royjoafot6,
@@ -74,11 +90,11 @@ const fotosJuntos = [
   royjoafot13, royjoafot14, royjoafot15, royjoafot16, royjoafot17, royjoafot18,
   royjoafot19, royjoafot20, royjoafot21, royjoafot22, royjoafot23, royjoafot24,
   royjoafot25, royjoafot26, royjoafot27, royjoafot28, royjoafot29, royjoafot30,
-  royjoafot31, royjoafot32, royjoafot33, royjoafot34,
+  royjoafot31, royjoafot32, royjoafot33, royjoafot34, royjoafot35,
 ]
 
 const citas = [
-      { titulo: 'Ir a merendar a Berenice', fotos: [citaBerenice] },
+      { titulo: 'Ir a merendar a Berenice', fotos: [citaBerenice, berenice2, berenice21, berenice22] },
       { titulo: 'Ir al cine Showcase IMAX a ver La Odisea', fotos: [] },
       { titulo: 'Mates en la costanera', fotos: [] },
       { titulo: 'Patinar sobre hielo', fotos: [] },
@@ -93,7 +109,7 @@ const citas = [
       { titulo: 'Ir al Rosedal', fotos: [] },
       { titulo: 'Cocinar juntos', fotos: [cocinarJuntos] },
       { titulo: 'Ir al pool', fotos: [citaPool, citaPool2] },
-      { titulo: 'Ir a comer panchos en lo de Pepe', fotos: [citaLoDePepe, citaLoDePepe2] },
+      { titulo: 'Ir a comer panchos en lo de Pepe', fotos: [citaLoDePepe, citaLoDePepe2, citaPepe3] },
       { titulo: 'Ir a ver cars reestreno 8 octubre', fotos: [] },
       { titulo: 'Salir juntos a bailar', fotos: [] },
       { titulo: 'Jugar al tejo', fotos: [tejo] },
@@ -124,7 +140,7 @@ const citas = [
       {titulo: 'Churros', fotos: [churros] },
       {titulo: 'Capretta', fotos: [capretta] },
       {titulo: 'Café con leche y tostados', fotos: [cafecitoYTostados] },
-      {titulo: 'Mega hamburguesas', fotos: [MegaHamburguesas] },
+      {titulo: 'Mega hamburguesas', fotos: [MegaHamburguesas, megaBurgersYFritas] },
       {titulo: 'Torre de cartas', fotos: [TorreDeCartas] },
       {titulo: 'Cocinar fideos con manteca', fotos: [fideosConManteca] },
       {titulo: 'Hacer pochoclos juntos', fotos: [pochoclosJuntos] },
@@ -132,6 +148,11 @@ const citas = [
       {titulo: 'Desayuno en YPF', fotos: [desayunoYPF] },
       {titulo: 'Ir a comer a Mostaza', fotos: [mostaza] },
       {titulo: 'Cocinar salchideos juntos', fotos: [Salchideos] },
+      {titulo: 'Comer panqueques juntos', fotos: [panquequesJuntos, panquequesJuntos2] },
+      {titulo: 'Jugar Plants vs Zombies', fotos: [jugarPlantaVsZombies] },
+      {titulo: 'Ir a comer helado juntos', fotos: [heladoJuntos] },
+      {titulo: 'Ir a Luján', fotos: [lujan2026, lujan2026Dos, lujan2026Tres, lujan2026Cuatro] },
+      {titulo: 'Pizza en lo de los suegros', fotos: [pizzaDeLosSuegris] },
 
       
 
@@ -177,7 +198,16 @@ app.innerHTML = `
   </main>
   <dialog class="photo-lightbox" aria-label="Foto ampliada">
     <button class="photo-lightbox-close" type="button" aria-label="Cerrar foto">×</button>
-    <img class="photo-lightbox-image" alt="" />
+    <button class="photo-lightbox-nav photo-lightbox-prev" type="button" data-lightbox-prev aria-label="Foto anterior">‹</button>
+    <div class="photo-lightbox-stage" data-lightbox-stage>
+      <img class="photo-lightbox-image" alt="" draggable="false" />
+    </div>
+    <button class="photo-lightbox-nav photo-lightbox-next" type="button" data-lightbox-next aria-label="Foto siguiente">›</button>
+    <div class="photo-lightbox-controls" data-lightbox-controls>
+      <button type="button" data-lightbox-zoom-out aria-label="Alejar">−</button>
+      <span class="photo-lightbox-count" data-lightbox-count></span>
+      <button type="button" data-lightbox-zoom-in aria-label="Acercar">+</button>
+    </div>
   </dialog>
 `
 
@@ -189,7 +219,7 @@ function renderCitas() {
   const renderGrupo = (titulo, lista, hecha) => lista.length ? `
     <section class="mt-7">
       <h3 class="text-sm font-bold uppercase tracking-wide text-blush/70">${titulo}</h3>
-      <ul class="mt-3 grid grid-cols-1 items-stretch gap-3 sm:grid-cols-2">
+      <ul class="mt-3 grid grid-cols-1 items-stretch gap-3">
         ${lista.map((cita) => `
           <li class="cita-card min-w-0 rounded-2xl border p-3 backdrop-blur-sm sm:p-4 ${hecha ? 'border-mint/30 bg-mint/10' : 'border-white/10 bg-white/5'}">
             <p class="break-words text-sm font-semibold leading-snug text-rose sm:text-base">${hecha ? '♥' : '♡'} ${cita.titulo}</p>
@@ -197,7 +227,7 @@ function renderCitas() {
             ${cita.fotos.length ? `
               <div class="cita-carousel mt-3" data-cita-carousel="${citas.indexOf(cita)}">
                 <div class="relative overflow-hidden rounded-xl border border-mint/20 bg-ink/30">
-                  <img src="${cita.fotos[0]}" alt="${cita.titulo} - foto 1" loading="lazy" class="cita-photo aspect-[4/3] w-full object-contain" />
+                  <img src="${cita.fotos[0]}" alt="${cita.titulo} - foto 1" loading="lazy" class="cita-photo aspect-[4/3] w-full object-contain" data-fotos-grupo="${citas.indexOf(cita)}" data-fotos-indice="0" />
                   ${cita.fotos.length > 1 ? `
                     <button type="button" class="cita-carousel-button absolute left-2 top-1/2 -translate-y-1/2" data-cita-prev aria-label="Foto anterior">‹</button>
                     <button type="button" class="cita-carousel-button absolute right-2 top-1/2 -translate-y-1/2" data-cita-next aria-label="Foto siguiente">›</button>
@@ -232,6 +262,7 @@ function initCitasCarousels() {
       photoIndex = (nextIndex + cita.fotos.length) % cita.fotos.length
       image.src = cita.fotos[photoIndex]
       image.alt = `${cita.titulo} - foto ${photoIndex + 1}`
+      image.dataset.fotosIndice = photoIndex
       counter.textContent = `${photoIndex + 1} / ${cita.fotos.length}`
     }
 
@@ -283,6 +314,7 @@ function showFotosJuntos(photoIndex) {
   img.className = 'carrusel-foto h-full w-full object-contain'
   img.alt = `Nosotros dos - foto ${fotosJuntosIndice + 1}`
   img.draggable = false
+  img.dataset.fotosJuntosIndice = fotosJuntosIndice
   img.style.opacity = '0'
   img.addEventListener('load', () => {
     img.style.opacity = '1'
@@ -319,17 +351,172 @@ initFotosJuntos()
 
 const lightbox = document.querySelector('.photo-lightbox')
 const lightboxImage = lightbox.querySelector('.photo-lightbox-image')
+const lightboxStage = lightbox.querySelector('[data-lightbox-stage]')
+const lightboxPrev = lightbox.querySelector('[data-lightbox-prev]')
+const lightboxNext = lightbox.querySelector('[data-lightbox-next]')
+const lightboxCount = lightbox.querySelector('[data-lightbox-count]')
+const lightboxControls = lightbox.querySelector('[data-lightbox-controls]')
+const lightboxZoomIn = lightbox.querySelector('[data-lightbox-zoom-in]')
+const lightboxZoomOut = lightbox.querySelector('[data-lightbox-zoom-out]')
+
+let lightboxGrupo = []
+let lightboxIndice = 0
+let lightboxEscala = 1
+let lightboxTranslateX = 0
+let lightboxTranslateY = 0
+
+function lightboxAplicarTransform() {
+  lightboxImage.style.transform = `translate(${lightboxTranslateX}px, ${lightboxTranslateY}px) scale(${lightboxEscala})`
+  lightboxImage.classList.toggle('photo-lightbox-image-zoom', lightboxEscala > 1)
+}
+
+function lightboxResetZoom() {
+  lightboxEscala = 1
+  lightboxTranslateX = 0
+  lightboxTranslateY = 0
+  lightboxAplicarTransform()
+}
+
+function lightboxClampTranslate() {
+  const stageRect = lightboxStage.getBoundingClientRect()
+  const anchoImg = lightboxImage.offsetWidth
+  const altoImg = lightboxImage.offsetHeight
+  const maxX = Math.max(0, (anchoImg * lightboxEscala - stageRect.width) / 2)
+  const maxY = Math.max(0, (altoImg * lightboxEscala - stageRect.height) / 2)
+  lightboxTranslateX = Math.min(maxX, Math.max(-maxX, lightboxTranslateX))
+  lightboxTranslateY = Math.min(maxY, Math.max(-maxY, lightboxTranslateY))
+  lightboxAplicarTransform()
+}
+
+function lightboxZoomEnPunto(clientX, clientY, factor) {
+  const nextEscala = Math.min(6, Math.max(1, lightboxEscala * factor))
+  const k = nextEscala / lightboxEscala
+  const rect = lightboxStage.getBoundingClientRect()
+  const px = clientX - rect.left - lightboxStage.clientWidth / 2
+  const py = clientY - rect.top - lightboxStage.clientHeight / 2
+  lightboxTranslateX = px - (px - lightboxTranslateX) * k
+  lightboxTranslateY = py - (py - lightboxTranslateY) * k
+  lightboxEscala = nextEscala
+  lightboxClampTranslate()
+}
+
+function lightboxMostrarFoto(indice) {
+  if (!lightboxGrupo.length) return
+  lightboxIndice = ((indice % lightboxGrupo.length) + lightboxGrupo.length) % lightboxGrupo.length
+  lightboxResetZoom()
+  lightboxImage.src = lightboxGrupo[lightboxIndice]
+  lightboxImage.alt = lightboxAltDe(lightboxGrupo[lightboxIndice])
+  const muchos = lightboxGrupo.length > 1
+  lightboxPrev.hidden = !muchos
+  lightboxNext.hidden = !muchos
+  lightboxCount.hidden = !muchos
+  if (muchos) lightboxCount.textContent = `${lightboxIndice + 1} / ${lightboxGrupo.length}`
+}
+
+function lightboxAltDe(src) {
+  const cita = citas.find((c) => c.fotos.includes(src))
+  if (cita) return `${cita.titulo} - foto ampliada`
+  return 'Foto ampliada'
+}
 
 app.addEventListener('click', (event) => {
   const foto = event.target.closest('img')
   if (!foto || lightbox.contains(foto)) return
 
-  lightboxImage.src = foto.currentSrc || foto.src
-  lightboxImage.alt = foto.alt
+  if (foto.dataset.fotosGrupo !== undefined) {
+    const cita = citas[Number(foto.dataset.fotosGrupo)]
+    lightboxGrupo = cita.fotos
+    lightboxMostrarFoto(Number(foto.dataset.fotosIndice))
+  } else if (foto.dataset.fotosJuntosIndice !== undefined) {
+    lightboxGrupo = fotosJuntos
+    lightboxMostrarFoto(Number(foto.dataset.fotosJuntosIndice))
+  } else {
+    lightboxGrupo = [foto.currentSrc || foto.src]
+    lightboxMostrarFoto(0)
+  }
   lightbox.showModal()
 })
 
 lightbox.querySelector('.photo-lightbox-close').addEventListener('click', () => lightbox.close())
+lightboxPrev.addEventListener('click', () => lightboxMostrarFoto(lightboxIndice - 1))
+lightboxNext.addEventListener('click', () => lightboxMostrarFoto(lightboxIndice + 1))
+lightboxZoomIn.addEventListener('click', () => lightboxZoomEnPunto(
+  lightboxStage.getBoundingClientRect().left + lightboxStage.clientWidth / 2,
+  lightboxStage.getBoundingClientRect().top + lightboxStage.clientHeight / 2,
+  1.6
+))
+lightboxZoomOut.addEventListener('click', () => {
+  if (lightboxEscala > 1) lightboxZoomEnPunto(
+    lightboxStage.getBoundingClientRect().left + lightboxStage.clientWidth / 2,
+    lightboxStage.getBoundingClientRect().top + lightboxStage.clientHeight / 2,
+    1 / 1.6
+  )
+})
+
 lightbox.addEventListener('click', (event) => {
   if (event.target === lightbox) lightbox.close()
 })
+
+const lightboxPuntos = new Map()
+let lightboxPunteroBase = { x: 0, y: 0 }
+let lightboxPunteroInicio = { x: 0, y: 0 }
+let lightboxDistanciaInicio = 0
+let lightboxMitadInicio = { x: 0, y: 0 }
+let lightboxTrasladoBase = { x: 0, y: 0 }
+let lightboxEscalaBase = 1
+
+lightboxStage.addEventListener('pointerdown', (event) => {
+  lightboxStage.setPointerCapture(event.pointerId)
+  lightboxStage.classList.add('photo-lightbox-dragging')
+  lightboxPuntos.set(event.pointerId, { x: event.clientX, y: event.clientY })
+  lightboxTrasladoBase = { x: lightboxTranslateX, y: lightboxTranslateY }
+  lightboxEscalaBase = lightboxEscala
+  if (lightboxPuntos.size === 1) {
+    lightboxPunteroInicio = { x: event.clientX, y: event.clientY }
+    lightboxPunteroBase = { x: event.clientX, y: event.clientY }
+  } else if (lightboxPuntos.size === 2) {
+    const [a, b] = [...lightboxPuntos.values()]
+    lightboxDistanciaInicio = Math.max(1, Math.hypot(a.x - b.x, a.y - b.y))
+    lightboxMitadInicio = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 }
+  }
+})
+
+lightboxStage.addEventListener('pointermove', (event) => {
+  if (!lightboxPuntos.has(event.pointerId)) return
+  lightboxPuntos.set(event.pointerId, { x: event.clientX, y: event.clientY })
+  if (lightboxPuntos.size === 2) {
+    const [a, b] = [...lightboxPuntos.values()]
+    const distancia = Math.max(1, Math.hypot(a.x - b.x, a.y - b.y))
+    const mitad = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 }
+    lightboxEscala = Math.min(6, Math.max(1, lightboxEscalaBase * (distancia / lightboxDistanciaInicio)))
+    lightboxTranslateX = lightboxTrasladoBase.x + (mitad.x - lightboxMitadInicio.x)
+    lightboxTranslateY = lightboxTrasladoBase.y + (mitad.y - lightboxMitadInicio.y)
+    lightboxClampTranslate()
+  } else if (lightboxPuntos.size === 1 && lightboxEscala > 1) {
+    const punto = [...lightboxPuntos.values()][0]
+    lightboxTranslateX = lightboxTrasladoBase.x + (punto.x - lightboxPunteroBase.x)
+    lightboxTranslateY = lightboxTrasladoBase.y + (punto.y - lightboxPunteroBase.y)
+    lightboxClampTranslate()
+  }
+})
+
+const lightboxQuitarPuntero = (event) => {
+  lightboxPuntos.delete(event.pointerId)
+  if (lightboxPuntos.size === 0) lightboxStage.classList.remove('photo-lightbox-dragging')
+}
+lightboxStage.addEventListener('pointerup', lightboxQuitarPuntero)
+lightboxStage.addEventListener('pointercancel', lightboxQuitarPuntero)
+lightboxStage.addEventListener('lostpointercapture', lightboxQuitarPuntero)
+
+lightboxStage.addEventListener('dblclick', (event) => {
+  if (lightboxEscala > 1) {
+    lightboxResetZoom()
+  } else {
+    lightboxZoomEnPunto(event.clientX, event.clientY, 2)
+  }
+})
+
+lightboxStage.addEventListener('wheel', (event) => {
+  if (lightboxEscala > 1 || event.deltaY !== 0) event.preventDefault()
+  lightboxZoomEnPunto(event.clientX, event.clientY, event.deltaY < 0 ? 1.18 : 1 / 1.18)
+}, { passive: false })
