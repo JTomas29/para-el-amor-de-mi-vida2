@@ -68,6 +68,18 @@ import royjoafot32 from './assets/img/royjoafot32.jpeg'
 import royjoafot33 from './assets/img/royjoafot33.jpeg'
 import royjoafot34 from './assets/img/royjoafot34.jpeg'
 import royjoafot35 from './assets/img/royjoafot35.jpeg'
+import royjoafot36 from './assets/img/royjoafot36.jpeg'
+import royjoafot37 from './assets/img/royjoafot37.jpeg'
+import royjoafot38 from './assets/img/royjoafot38.jpeg'
+
+import cars1 from './assets/img/cars1.jpeg'
+import cars2 from './assets/img/cars2.jpeg'
+import cars3 from './assets/img/cars3.jpeg'
+import juegosDelHambre1 from './assets/img/juegosDelHambre1.jpeg'
+import juegosDelHambre2 from './assets/img/juegosdelhambre2.jpeg'
+import lucianoHelado from './assets/img/lucianoHelado.jpeg'
+import lucianoHelado2 from './assets/img/lucianoHelado2.jpeg'
+import lucianoHelado3 from './assets/img/lucianoHelado3.jpeg'
 
 import berenice2 from './assets/img/berenice2.jpeg'
 import berenice21 from './assets/img/berenice2.1.jpeg'
@@ -91,6 +103,7 @@ const fotosJuntos = [
   royjoafot19, royjoafot20, royjoafot21, royjoafot22, royjoafot23, royjoafot24,
   royjoafot25, royjoafot26, royjoafot27, royjoafot28, royjoafot29, royjoafot30,
   royjoafot31, royjoafot32, royjoafot33, royjoafot34, royjoafot35,
+  royjoafot36, royjoafot37, royjoafot38,
 ]
 
 const citas = [
@@ -105,12 +118,12 @@ const citas = [
       { titulo: 'Ir a ver el reestreno de Harry Potter', fotos: [harryPotter, harrypotter2] },
       { titulo: 'Ir a ver The Fockers in Law', fotos: [] },
       { titulo: 'Ir a ver Clayface', fotos: [] },
-      { titulo: 'Ir a ver Los Juegos del Hambre', fotos: [] },
+      { titulo: 'Ir a ver Los Juegos del Hambre', fotos: [juegosDelHambre1, juegosDelHambre2] },
       { titulo: 'Ir al Rosedal', fotos: [] },
       { titulo: 'Cocinar juntos', fotos: [cocinarJuntos] },
       { titulo: 'Ir al pool', fotos: [citaPool, citaPool2] },
       { titulo: 'Ir a comer panchos en lo de Pepe', fotos: [citaLoDePepe, citaLoDePepe2, citaPepe3] },
-      { titulo: 'Ir a ver cars reestreno 8 octubre', fotos: [] },
+      { titulo: 'Ir a ver cars reestreno 8 octubre', fotos: [cars1, cars2, cars3] },
       { titulo: 'Salir juntos a bailar', fotos: [] },
       { titulo: 'Jugar al tejo', fotos: [tejo] },
       { titulo: 'Jugar a las cartas', fotos: [jugarALasCartas] },
@@ -150,7 +163,7 @@ const citas = [
       {titulo: 'Cocinar salchideos juntos', fotos: [Salchideos] },
       {titulo: 'Comer panqueques juntos', fotos: [panquequesJuntos, panquequesJuntos2] },
       {titulo: 'Jugar Plants vs Zombies', fotos: [jugarPlantaVsZombies] },
-      {titulo: 'Ir a comer helado juntos', fotos: [heladoJuntos] },
+      {titulo: 'Ir a comer helado juntos', fotos: [heladoJuntos, lucianoHelado, lucianoHelado2, lucianoHelado3] },
       {titulo: 'Ir a Luján', fotos: [lujan2026, lujan2026Dos, lujan2026Tres, lujan2026Cuatro] },
       {titulo: 'Pizza en lo de los suegros', fotos: [pizzaDeLosSuegris] },
 
