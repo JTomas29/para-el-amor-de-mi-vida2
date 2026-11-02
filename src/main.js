@@ -71,6 +71,11 @@ import royjoafot35 from './assets/img/royjoafot35.jpeg'
 import royjoafot36 from './assets/img/royjoafot36.jpeg'
 import royjoafot37 from './assets/img/royjoafot37.jpeg'
 import royjoafot38 from './assets/img/royjoafot38.jpeg'
+import royjoafot39 from './assets/img/royjoafot39.jpeg'
+import royjoafot40 from './assets/img/royjoafot40.jpeg'
+import royjoafot41 from './assets/img/royjoafot41.jpeg'
+import royjoafot42 from './assets/img/royjoafot42.jpeg'
+import royjoafot43 from './assets/img/royjoafot43.jpeg'
 
 import cars1 from './assets/img/cars1.jpeg'
 import cars2 from './assets/img/cars2.jpeg'
@@ -95,6 +100,15 @@ import megaBurgersYFritas from './assets/img/MegaBurgersYFritas.jpeg'
 import panquequesJuntos from './assets/img/panquequesJuntos.jpeg'
 import panquequesJuntos2 from './assets/img/panquequesJuntos2.jpeg'
 import pizzaDeLosSuegris from './assets/img/PizzaDeLosSuegris.jpeg'
+import clayface from './assets/img/clayface.jpeg'
+import gula from './assets/img/gula.jpeg'
+import gula2 from './assets/img/gula2.jpeg'
+import gulapostre from './assets/img/gulapostre.jpeg'
+import meriendaRandom1 from './assets/img/meriendaRandom1.jpeg'
+import meriendaRandom2 from './assets/img/meriendaRandom2.jpeg'
+import panchoEnLoDePepe from './assets/img/panchoEnLoDePepe.jpeg'
+import prego from './assets/img/prego.jpeg'
+import prego2 from './assets/img/prego2.jpeg'
 
 const fotosJuntos = [
   royjoafot1, royjoafot2, royjoafot3, royjoafot4, royjoafot5, royjoafot6,
@@ -103,7 +117,8 @@ const fotosJuntos = [
   royjoafot19, royjoafot20, royjoafot21, royjoafot22, royjoafot23, royjoafot24,
   royjoafot25, royjoafot26, royjoafot27, royjoafot28, royjoafot29, royjoafot30,
   royjoafot31, royjoafot32, royjoafot33, royjoafot34, royjoafot35,
-  royjoafot36, royjoafot37, royjoafot38,
+  royjoafot36, royjoafot37, royjoafot38, royjoafot39, royjoafot40,
+  royjoafot41, royjoafot42, royjoafot43,
 ]
 
 const citas = [
@@ -117,12 +132,12 @@ const citas = [
       { titulo: 'Ir a comer en Dean & Dennys', fotos: [citaDeanDennys, citaDeanDennys2] },
       { titulo: 'Ir a ver el reestreno de Harry Potter', fotos: [harryPotter, harrypotter2] },
       { titulo: 'Ir a ver The Fockers in Law', fotos: [] },
-      { titulo: 'Ir a ver Clayface', fotos: [] },
+      { titulo: 'Ir a ver Clayface', fotos: [clayface] },
       { titulo: 'Ir a ver Los Juegos del Hambre', fotos: [juegosDelHambre1, juegosDelHambre2] },
       { titulo: 'Ir al Rosedal', fotos: [] },
       { titulo: 'Cocinar juntos', fotos: [cocinarJuntos] },
       { titulo: 'Ir al pool', fotos: [citaPool, citaPool2] },
-      { titulo: 'Ir a comer panchos en lo de Pepe', fotos: [citaLoDePepe, citaLoDePepe2, citaPepe3] },
+      { titulo: 'Ir a comer panchos en lo de Pepe', fotos: [citaLoDePepe, citaLoDePepe2, citaPepe3, panchoEnLoDePepe] },
       { titulo: 'Ir a ver cars reestreno 8 octubre', fotos: [cars1, cars2, cars3] },
       { titulo: 'Salir juntos a bailar', fotos: [] },
       { titulo: 'Jugar al tejo', fotos: [tejo] },
@@ -166,6 +181,9 @@ const citas = [
       {titulo: 'Ir a comer helado juntos', fotos: [heladoJuntos, lucianoHelado, lucianoHelado2, lucianoHelado3] },
       {titulo: 'Ir a Luján', fotos: [lujan2026, lujan2026Dos, lujan2026Tres, lujan2026Cuatro] },
       {titulo: 'Pizza en lo de los suegros', fotos: [pizzaDeLosSuegris] },
+      {titulo: 'Ir a comer a Gula', fotos: [gula, gula2, gulapostre] },
+      {titulo: 'Ir a comer a Prego', fotos: [prego, prego2] },
+      {titulo: 'Merienda random', fotos: [meriendaRandom1, meriendaRandom2] },
 
       
 
